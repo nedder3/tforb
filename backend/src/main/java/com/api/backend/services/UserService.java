@@ -12,9 +12,13 @@ public interface UserService {
         User createUser(User user);
         User updateUser(User user);
         void deleteUser(Long userId);
-       Optional<User> getUserById(Long userId);
+        Optional<User> getUserById(Long userId);
         List<User> getAllUsers();
 
 
+        //identificationType;
+        List<User> getAllUserByIdentificationType(String identificationType);
 
+        // userIdentificationNumber;
+        List<User> getUserByUserIdentificationNumber(String identificationType);
 }

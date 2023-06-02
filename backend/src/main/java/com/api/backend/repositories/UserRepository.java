@@ -11,6 +11,7 @@ import java.util.Optional;
 @Repository
 public interface UserRepository extends JpaRepository<User,Long> {
 
-
+    List<User> findByIdentificationType(String identificationType);
+    List<User> findByuserIdentificationNumber(String userIdentificationNumber);
 
 }

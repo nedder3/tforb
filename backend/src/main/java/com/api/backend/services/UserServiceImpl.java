@@ -35,12 +35,27 @@ public class UserServiceImpl implements  UserService{
 
     @Override
     public Optional <User> getUserById(Long userId) {
-        return null;
+        return userRepository.findById(userId);
     }
 
     @Override
     public List<User> getAllUsers() {
         return null;
     }
+
+    // in-class methods
+
+    //identificationType;
+    @Override
+    public List<User> getAllUserByIdentificationType(String identificationType){
+        return null;
+    }
+
+   // userIdentificationNumber;
+    @Override
+   public List<User> getUserByUserIdentificationNumber(String identificationType){
+       return null;
+   }
+
 
 }
