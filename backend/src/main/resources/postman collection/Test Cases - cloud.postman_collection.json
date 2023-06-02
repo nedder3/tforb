@@ -1,0 +1,210 @@
+{
+	"info": {
+		"_postman_id": "1b2c9872-930b-4378-8e5c-8543b86608dd",
+		"name": "Test Cases - cloud",
+		"description": "Postman collection for test API endpoints on gpc",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "10543570"
+	},
+	"item": [
+		{
+			"name": "Create user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"identificationType\" :\"Dni\",\r\n    \"userIdentificationNumber\" :\"32221\",\r\n    \"password\":\"test4\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://springgcp-388617.rj.r.appspot.com//api/users/create_user",
+					"protocol": "https",
+					"host": [
+						"springgcp-388617",
+						"rj",
+						"r",
+						"appspot",
+						"com"
+					],
+					"path": [
+						"",
+						"api",
+						"users",
+						"create_user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET ALL users ",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://springgcp-388617.rj.r.appspot.com//api/users/get_all_users",
+					"protocol": "https",
+					"host": [
+						"springgcp-388617",
+						"rj",
+						"r",
+						"appspot",
+						"com"
+					],
+					"path": [
+						"",
+						"api",
+						"users",
+						"get_all_users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET User by ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://springgcp-388617.rj.r.appspot.com//api/users/get_user/2",
+					"protocol": "https",
+					"host": [
+						"springgcp-388617",
+						"rj",
+						"r",
+						"appspot",
+						"com"
+					],
+					"path": [
+						"",
+						"api",
+						"users",
+						"get_user",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update User",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "https://springgcp-388617.rj.r.appspot.com//api/users/update_user",
+					"protocol": "https",
+					"host": [
+						"springgcp-388617",
+						"rj",
+						"r",
+						"appspot",
+						"com"
+					],
+					"path": [
+						"",
+						"api",
+						"users",
+						"update_user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User by id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://springgcp-388617.rj.r.appspot.com//api/users/delete_user/3",
+					"protocol": "https",
+					"host": [
+						"springgcp-388617",
+						"rj",
+						"r",
+						"appspot",
+						"com"
+					],
+					"path": [
+						"",
+						"api",
+						"users",
+						"delete_user",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Users by identification type",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://springgcp-388617.rj.r.appspot.com/api/users/get_user/?identificationType=Dni",
+					"protocol": "https",
+					"host": [
+						"springgcp-388617",
+						"rj",
+						"r",
+						"appspot",
+						"com"
+					],
+					"path": [
+						"",
+						"api",
+						"users",
+						"get_user",
+						""
+					],
+					"query": [
+						{
+							"key": "identificationType",
+							"value": "Dni"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User  by identification number",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://springgcp-388617.rj.r.appspot.com/api/users/get_user?userIdentificationNumber=322",
+					"protocol": "https",
+					"host": [
+						"springgcp-388617",
+						"rj",
+						"r",
+						"appspot",
+						"com"
+					],
+					"path": [
+						"",
+						"api",
+						"users",
+						"get_user"
+					],
+					"query": [
+						{
+							"key": "userIdentificationNumber",
+							"value": "322"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
