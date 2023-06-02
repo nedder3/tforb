@@ -39,8 +39,20 @@ public class UserRestController {
         userServiceImpl.updateUser(user);
     }
 
-    @DeleteMapping(value="delete_user",headers = "Accept=application/json")
+    @DeleteMapping(value="delete_user/{id}",headers = "Accept=application/json")
     public void deleteUser(@PathVariable Long id ){
          userServiceImpl.deleteUser(id);
     }
+
+    //getAllUserByIdentificationType
+    @GetMapping(value="get_user_by_type/{identificationType}",headers = "Accept=application/json")
+    public List<User> findByIdentificationType(@PathVariable String identificationType){
+        return userServiceImpl.getAllUserByIdentificationType(identificationType);
+    }
+    //getUserByUserIdentificationNumber
+    @GetMapping(value="get_user_by_number/{UserIdentificationNumber}",headers = "Accept=application/json")
+    public List<User> findByUserIdentificationNumber(@PathVariable Integer UserIdentificationNumber){
+        return userServiceImpl.getUserByUserIdentificationNumber(UserIdentificationNumber);
+    }
+
 }

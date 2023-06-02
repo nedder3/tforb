@@ -54,7 +54,7 @@ public class UserServiceImpl implements  UserService{
    // userIdentificationNumber;
     @Override
    public List<User> getUserByUserIdentificationNumber(Integer userIdentificationNumber){
-       return userRepository.findByuserIdentificationNumber(userIdentificationNumber);
+       return userRepository.findByUserIdentificationNumber(userIdentificationNumber);
    }
 
 
