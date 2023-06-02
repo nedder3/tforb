@@ -20,5 +20,5 @@ public interface UserService {
         List<User> getAllUserByIdentificationType(String identificationType);
 
         // userIdentificationNumber;
-        List<User> getUserByUserIdentificationNumber(String identificationType);
+        List<User> getUserByUserIdentificationNumber(Integer userIdentificationNumber);
 }

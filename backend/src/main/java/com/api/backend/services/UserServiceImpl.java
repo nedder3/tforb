@@ -25,7 +25,7 @@ public class UserServiceImpl implements  UserService{
 
     @Override
     public User updateUser(User user) {
-        return null;
+        return userRepository.save(user);
     }
 
     @Override
@@ -40,7 +40,7 @@ public class UserServiceImpl implements  UserService{
 
     @Override
     public List<User> getAllUsers() {
-        return null;
+        return userRepository.findAll();
     }
 
     // in-class methods
@@ -48,13 +48,13 @@ public class UserServiceImpl implements  UserService{
     //identificationType;
     @Override
     public List<User> getAllUserByIdentificationType(String identificationType){
-        return null;
+        return userRepository.findByIdentificationType(identificationType);
     }
 
    // userIdentificationNumber;
     @Override
-   public List<User> getUserByUserIdentificationNumber(String identificationType){
-       return null;
+   public List<User> getUserByUserIdentificationNumber(Integer userIdentificationNumber){
+       return userRepository.findByuserIdentificationNumber(userIdentificationNumber);
    }
 
 
