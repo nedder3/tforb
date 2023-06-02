@@ -34,4 +34,13 @@ public class UserRestController {
         return userServiceImpl.getUserById(id);
     }
 
+    @PutMapping(value="update_user",headers = "Accept=application/json")
+    public void updateUser(@RequestBody User user){
+        userServiceImpl.updateUser(user);
+    }
+
+    @DeleteMapping(value="delete_user",headers = "Accept=application/json")
+    public void deleteUser(@PathVariable Long id ){
+         userServiceImpl.deleteUser(id);
+    }
 }
