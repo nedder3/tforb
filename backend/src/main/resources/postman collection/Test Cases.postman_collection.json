@@ -1,0 +1,220 @@
+{
+	"info": {
+		"_postman_id": "ee02356f-4619-4298-937a-f0b3e3350970",
+		"name": "Test Cases",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "10543570"
+	},
+	"item": [
+		{
+			"name": "Create User OK",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"identificationType\" :\"Var\",\r\n    \"userIdentificationNumber\" :\"322\",\r\n    \"password\":\"test3\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/users/create_user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"users",
+						"create_user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "All users",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/users/get_all_users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"users",
+						"get_all_users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User by ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/users/get_user/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"users",
+						"get_user",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update user",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \r\n    \"identificationType\": \"Dni\",\r\n    \"userIdentificationNumber\": 11122211,\r\n    \"password\": \"tuviejito\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/users/update_user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"users",
+						"update_user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User by id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/users/delete_user/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"users",
+						"delete_user",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Users by identification type",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/users/get_user/?identificationType=Var",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"users",
+						"get_user",
+						""
+					],
+					"query": [
+						{
+							"key": "identificationType",
+							"value": "Var"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User  by identification number",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/users/get_user?userIdentificationNumber=32943012",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"users",
+						"get_user"
+					],
+					"query": [
+						{
+							"key": "userIdentificationNumber",
+							"value": "32943012"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "charge db",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "   {\r\n        \"id\": 1,\r\n        \"identificationType\": \"Dni\",\r\n        \"userIdentificationNumber\": 32943012,\r\n        \"password\": \"243ks\"\r\n    },\r\n    {\r\n        \"id\": 2,\r\n        \"identificationType\": \"Dni\",\r\n        \"userIdentificationNumber\": 11111111,\r\n        \"password\": \"tuviejito\"\r\n    },\r\n    {\r\n        \"id\": 4,\r\n        \"identificationType\": \"Dni\",\r\n        \"userIdentificationNumber\": 33224455,\r\n        \"password\": \"perrinho\"\r\n    },\r\n    {\r\n        \"id\": 5,\r\n        \"identificationType\": \"Dni\",\r\n        \"userIdentificationNumber\": 4343,\r\n        \"password\": \"diogenes\"\r\n    },\r\n    {\r\n        \"id\": 6,\r\n        \"identificationType\": \"Lc\",\r\n        \"userIdentificationNumber\": 21311442,\r\n        \"password\": \"as32k.3\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/users/create_user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"users",
+						"create_user"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
