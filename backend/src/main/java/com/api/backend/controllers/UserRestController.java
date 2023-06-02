@@ -1,5 +1,6 @@
 package com.api.backend.controllers;
 
+import com.api.backend.dtos.request.UserDTO;
 import com.api.backend.models.User;
 import com.api.backend.services.UserServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,7 +23,7 @@ public class UserRestController {
         this.userServiceImpl = userServiceImpl;
     }
     @PostMapping(value = "create_user", headers = "Accept=application/json")
-    public ResponseEntity<Void> createUser(@RequestBody User user) {
+    public ResponseEntity<Void> createUser(@RequestBody UserDTO userDTO) {
         userServiceImpl.createUser(user);
         return ResponseEntity.status(HttpStatus.CREATED).build();
     }
