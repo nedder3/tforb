@@ -5,7 +5,6 @@ import com.api.backend.models.User;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
 
-
 @Service
 public class UserMapperServiceImpl implements UserMapperService {
         private final ModelMapper modelMapper;

@@ -1,6 +1,7 @@
 package com.api.backend.controllers;
 
 import com.api.backend.dtos.request.UserDTO;
+import com.api.backend.mappers.UserMapperService;
 import com.api.backend.models.User;
 import com.api.backend.services.UserServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,14 +17,18 @@ import java.util.Optional;
 @RequestMapping("/api/users")
 public class UserRestController {
 
-    private UserServiceImpl userServiceImpl;
+    private final UserServiceImpl userServiceImpl;
+    private final UserMapperService userMapperService;
 
     @Autowired
-    public UserRestController(UserServiceImpl userServiceImpl) {
+    public UserRestController(UserServiceImpl userServiceImpl, UserMapperService userMapperService) {
         this.userServiceImpl = userServiceImpl;
+        this.userMapperService = userMapperService;
     }
+
     @PostMapping(value = "create_user", headers = "Accept=application/json")
     public ResponseEntity<Void> createUser(@RequestBody UserDTO userDTO) {
+        User user = userMapperService.convertToEntity(userDTO);
         userServiceImpl.createUser(user);
         return ResponseEntity.status(HttpStatus.CREATED).build();
     }
