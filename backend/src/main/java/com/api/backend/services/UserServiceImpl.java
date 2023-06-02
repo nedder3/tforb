@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class UserServiceImpl implements  UserService{
@@ -33,7 +34,7 @@ public class UserServiceImpl implements  UserService{
     }
 
     @Override
-    public User getUserById(Long userId) {
+    public Optional <User> getUserById(Long userId) {
         return null;
     }
 
@@ -41,4 +42,5 @@ public class UserServiceImpl implements  UserService{
     public List<User> getAllUsers() {
         return null;
     }
+
 }
