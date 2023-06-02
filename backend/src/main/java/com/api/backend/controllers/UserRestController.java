@@ -45,14 +45,17 @@ public class UserRestController {
     }
 
     //getAllUserByIdentificationType
-    @GetMapping(value="get_user_by_type/{identificationType}",headers = "Accept=application/json")
-    public List<User> findByIdentificationType(@PathVariable String identificationType){
+    @GetMapping(value="get_user/",headers = "Accept=application/json")
+    public List<User> findByIdentificationType(@RequestParam("identificationType") String identificationType){
         return userServiceImpl.getAllUserByIdentificationType(identificationType);
     }
+
+
+
     //getUserByUserIdentificationNumber
-    @GetMapping(value="get_user_by_number/{UserIdentificationNumber}",headers = "Accept=application/json")
-    public List<User> findByUserIdentificationNumber(@PathVariable Integer UserIdentificationNumber){
-        return userServiceImpl.getUserByUserIdentificationNumber(UserIdentificationNumber);
+    @GetMapping(value="get_user",headers = "Accept=application/json")
+    public List<User> findByUserIdentificationNumber(@RequestParam ("userIdentificationNumber") Integer userIdentificationNumber){
+        return userServiceImpl.getUserByUserIdentificationNumber(userIdentificationNumber);
     }
 
 }
