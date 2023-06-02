@@ -10,8 +10,8 @@ import java.util.List;
 @Repository
 public interface UserRepository extends JpaRepository<User,Long> {
 
-    List<User> findByid(Long id);
-    List<User> findByidentificationType(String identificationType);
+    List<User> findByUserId(Long id);
+    List<User> findByIdentificationType(String identificationType);
     List<User> findByuserIdentificationNumber(String userIdentificationNumber);
 
 
